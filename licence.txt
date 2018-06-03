@@ -1,0 +1,22 @@
+
+--------------------------------------------------------------------------
+
+
+For radio amateurs experimentation, non-commercial use only. Thank you!
+
+
+--------------------------------------------------------------------------
+
+The mcHF project was result of significant time and money invested. I am 
+perfectly happy with the project being small time hobby endeavour. Although
+it looks like ready for mass production, this is not the intention of it,
+but rather to provide fun to the electronics/ham radio enthusiasts. So if you
+have grand business ideas, either for the source code or hardware, please 
+contact me first to reach some licensing agreement, instead of just doing
+quick copy pasta thing and pretend ignorance. I will appreciate it, thanks.
+
+
+73, Krassi Atanassov
+M0NKA
+
+djchrismarc@gmail.com
