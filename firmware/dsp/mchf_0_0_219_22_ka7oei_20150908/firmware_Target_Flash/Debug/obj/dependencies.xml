@@ -1,0 +1,715 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dependencies>
+   <includePath signature="/I..\..\..\..\..\..\..\..\..\Projects\mcHFx\firmware\mchf_firmware_0_0_219_22_ka7oei_20150908 /I..\..\..\..\..\..\..\..\..\Projects\mcHFx\firmware\mchf_firmware_0_0_219_22_ka7oei_20150908\hardware /I..\..\..\..\..\..\..\..\..\Projects\mcHFx\firmware\mchf_firmware_0_0_219_22_ka7oei_20150908\drivers\api /I..\..\..\..\..\..\..\..\..\Projects\mcHFx\firmware\mchf_firmware_0_0_219_22_ka7oei_20150908\drivers\keyboard /I..\..\..\..\..\..\..\..\..\Projects\mcHFx\firmware\mchf_firmware_0_0_219_22_ka7oei_20150908\usb\usbd\class /I..\..\..\..\..\..\..\..\..\Projects\mcHFx\firmware\mchf_firmware_0_0_219_22_ka7oei_20150908\cmsis_boot /I..\..\..\..\..\..\..\..\..\Projects\mcHFx\firmware\mchf_firmware_0_0_219_22_ka7oei_20150908\drivers\audio\codec /I..\..\..\..\..\..\..\..\..\Projects\mcHFx\firmware\mchf_firmware_0_0_219_22_ka7oei_20150908\drivers\cat /I..\..\..\..\..\..\..\..\..\Projects\mcHFx\firmware\mchf_firmware_0_0_219_22_ka7oei_20150908\drivers\audio\filters /I..\..\..\..\..\..\..\..\..\Projects\mcHFx\firmware\mchf_firmware_0_0_219_22_ka7oei_20150908\usb\otg\inc /I..\..\..\..\..\..\..\..\..\Projects\mcHFx\firmware\mchf_firmware_0_0_219_22_ka7oei_20150908\cmsis_lib\include /I..\..\..\..\..\..\..\..\..\Projects\mcHFx\firmware\mchf_firmware_0_0_219_22_ka7oei_20150908\drivers\ui\encoder /I..\..\..\..\..\..\..\..\..\Projects\mcHFx\firmware\mchf_firmware_0_0_219_22_ka7oei_20150908\usb\usbd\class\cdc /I..\..\..\..\..\..\..\..\..\Projects\mcHFx\firmware\mchf_firmware_0_0_219_22_ka7oei_20150908\usb\usbd\core\inc /I..\..\..\..\..\..\..\..\..\Projects\mcHFx\firmware\mchf_firmware_0_0_219_22_ka7oei_20150908\drivers\ui\lcd /I..\..\..\..\..\..\..\..\..\Projects\mcHFx\firmware\mchf_firmware_0_0_219_22_ka7oei_20150908\usb\usbh\core /I..\..\..\..\..\..\..\..\..\Projects\mcHFx\firmware\mchf_firmware_0_0_219_22_ka7oei_20150908\drivers\keyboard\usb /I..\..\..\..\..\..\..\..\..\Projects\mcHFx\firmware\mchf_firmware_0_0_219_22_ka7oei_20150908\usb\usbd /I..\..\..\..\..\..\..\..\..\Projects\mcHFx\firmware\mchf_firmware_0_0_219_22_ka7oei_20150908\cmsis /I..\..\..\..\..\..\..\..\..\Projects\mcHFx\firmware\mchf_firmware_0_0_219_22_ka7oei_20150908\usb\usbh /I..\..\..\..\..\..\..\..\..\Projects\mcHFx\firmware\mchf_firmware_0_0_219_22_ka7oei_20150908\usb\usbh\class /I..\..\..\..\..\..\..\..\..\Projects\mcHFx\firmware\mchf_firmware_0_0_219_22_ka7oei_20150908\usb\usbh\class\HID /I..\..\..\..\..\..\..\..\..\Projects\mcHFx\firmware\mchf_firmware_0_0_219_22_ka7oei_20150908\drivers\ui\oscillator /I..\..\..\..\..\..\..\..\..\Projects\mcHFx\firmware\mchf_firmware_0_0_219_22_ka7oei_20150908\drivers\cat\usb /I..\..\..\..\..\..\..\..\..\Projects\mcHFx\firmware\mchf_firmware_0_0_219_22_ka7oei_20150908\usb\usbh\class\HID\inc /I..\..\..\..\..\..\..\..\..\Projects\mcHFx\firmware /I..\..\..\..\..\..\..\..\..\Projects\mcHFx\firmware\mchf_firmware_0_0_219_22_ka7oei_20150908\usb\usbd\class\audio /I..\..\..\..\..\..\..\..\..\Projects\mcHFx\firmware\mchf_firmware_0_0_219_22_ka7oei_20150908\usb\usbd\class\cdc\inc /I..\..\..\..\..\..\..\..\..\Projects\mcHFx\firmware\mchf_firmware_0_0_219_22_ka7oei_20150908\misc\v_eprom /I..\..\..\..\..\..\..\..\..\Projects\mcHFx\firmware\mchf_firmware_0_0_219_22_ka7oei_20150908\drivers\ui\misc /I..\..\..\..\..\..\..\..\..\Projects\mcHFx\firmware\mchf_firmware_0_0_219_22_ka7oei_20150908\drivers\audio\cw /I..\..\..\..\..\..\..\..\..\Projects\mcHFx\firmware\mchf_firmware_0_0_219_22_ka7oei_20150908\cmsis_lib /I..\..\..\..\..\..\..\..\..\Projects\mcHFx\firmware\mchf_firmware_0_0_219_22_ka7oei_20150908\drivers\audio /I..\..\..\..\..\..\..\..\..\Projects\mcHFx\firmware\mchf_firmware_0_0_219_22_ka7oei_20150908\usb /I..\..\..\..\..\..\..\..\..\Projects\mcHFx\firmware\mchf_firmware_0_0_219_22_ka7oei_20150908\drivers\ui /I..\..\..\..\..\..\..\..\..\Projects\mcHFx\firmware\mchf_firmware_0_0_219_22_ka7oei_20150908\drivers\audio\softdds /I..\..\..\..\..\..\..\..\..\Projects\mcHFx\firmware\mchf_firmware_0_0_219_22_ka7oei_20150908\usb\usbd\core /I..\..\..\..\..\..\..\..\..\Projects\mcHFx\firmware\mchf_firmware_0_0_219_22_ka7oei_20150908\drivers /I..\..\..\..\..\..\..\..\..\Projects\mcHFx\firmware\mchf_firmware_0_0_219_22_ka7oei_20150908\usb\otg /I..\..\..\..\..\..\..\..\..\Projects\mcHFx\firmware\mchf_firmware_0_0_219_22_ka7oei_20150908\misc /I..\..\..\..\..\..\..\..\..\Projects\mcHFx\firmware\mchf_firmware_0_0_219_22_ka7oei_20150908\usb\usbd\class\audio\inc /I..\..\..\..\..\..\..\..\..\Projects\mcHFx\firmware\mchf_firmware_0_0_219_22_ka7oei_20150908\usb\usbh\core\inc">
+      <source file="..\..\..\cmsis_lib\include\stm32f4xx_exti.h" lastModified="14beb5b4450">
+         <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
+      </source>
+      <source file="..\..\..\drivers\audio\codec\i2s.h" lastModified="14beb5b4450">
+      </source>
+      <source file="..\..\..\drivers\ui\encoder\ui_rotary.c" lastModified="14beb5b4450">
+         <include file="..\..\..\hardware\mchf_board.h"/>
+         <include file="..\..\..\drivers\ui\encoder\ui_rotary.h"/>
+      </source>
+      <source file="..\..\..\drivers\audio\codec\i2s.c" lastModified="14beb5b4450">
+         <include file="..\..\..\hardware\mchf_board.h"/>
+         <include file="..\..\..\drivers\audio\codec\codec.h"/>
+         <include file="..\..\..\drivers\audio\audio_driver.h"/>
+         <include file="..\..\..\drivers\audio\codec\i2s.h"/>
+      </source>
+      <source file="..\..\..\drivers\audio\filters\q_rx_filter_3k6.h" lastModified="14beb5b4450">
+      </source>
+      <source file="..\..\..\usb\usbd\core\inc\usbd_req.h" lastModified="14beb5b4450">
+         <include file="..\..\..\usb\usbd\core\inc\usbd_def.h"/>
+         <include file="..\..\..\usb\usbd\core\inc\usbd_core.h"/>
+         <include file="..\..\..\drivers\cat\usb\usbd_conf.h"/>
+      </source>
+      <source file="..\..\..\drivers\audio\filters\iir_300hz.h" lastModified="14beb5b4450">
+      </source>
+      <source file="..\..\..\cmsis_lib\source\stm32f4xx_fsmc.c" lastModified="14beb5b4450">
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_fsmc.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
+      </source>
+      <source file="..\..\..\drivers\cat\usb\usbd_conf.h" lastModified="14beb5b4450">
+         <include file="..\..\..\usb\usb_conf.h"/>
+      </source>
+      <source file="..\..\..\usb\usbh\core\inc\usbh_hcs.h" lastModified="14beb5b4450">
+         <include file="..\..\..\usb\usbh\core\inc\usbh_core.h"/>
+      </source>
+      <source file="..\..\..\usb\usbd\class\audio\src\usbd_audio_out_if.c" lastModified="14beb5b4450">
+         <include file="..\..\..\usb\usbd\class\audio\inc\usbd_audio_core.h"/>
+         <include file="..\..\..\usb\usbd\class\audio\inc\usbd_audio_out_if.h"/>
+      </source>
+      <source file="..\..\..\drivers\audio\filters\iir_3_6k.h" lastModified="14beb5b4450">
+      </source>
+      <source file="..\..\..\drivers\audio\filters\iir_2k7_tx_bpf.h" lastModified="14beb5b4450">
+      </source>
+      <source file="..\..\..\cmsis_lib\include\stm32f4xx_i2c.h" lastModified="14beb5b4450">
+         <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
+      </source>
+      <source file="..\..\..\drivers\audio\filters\i_rx_filter_7kHz5.h" lastModified="14ebf82b090">
+      </source>
+      <source file="..\..\..\drivers\audio\filters\iq_rx_filter_am_3k6.h" lastModified="14beb5b4450">
+      </source>
+      <source file="..\..\..\usb\usbh\class\HID\inc\usbh_hid_keybd.h" lastModified="14beb5b4450">
+         <include file="..\..\..\usb\usb_conf.h"/>
+         <include file="..\..\..\usb\usbh\class\HID\inc\usbh_hid_core.h"/>
+      </source>
+      <source file="..\..\..\usb\usbd\class\audio\inc\usbd_audio_out_if.h" lastModified="14beb5b4c20">
+      </source>
+      <source file="..\..\..\drivers\audio\filters\q_rx_filter_5kHz.h" lastModified="14ebfbb1de0">
+      </source>
+      <source file="..\..\..\drivers\audio\cw\cw_gen.h" lastModified="14da786f448">
+         <include file="..\..\..\cmsis\arm_math.h"/>
+      </source>
+      <source file="..\..\..\drivers\audio\cw\cw_gen.c" lastModified="14da7862d10">
+         <include file="..\..\..\hardware\mchf_board.h"/>
+         <include file="..\..\..\drivers\ui\ui_driver.h"/>
+         <include file="..\..\..\drivers\audio\softdds\softdds.h"/>
+         <include file="..\..\..\drivers\audio\cw\cw_sm_tbl.h"/>
+         <include file="..\..\..\drivers\audio\codec\codec.h"/>
+         <include file="..\..\..\drivers\audio\cw\cw_gen.h"/>
+      </source>
+      <source file="..\..\..\usb\otg\src\usb_hcd.c" lastModified="14beb5b4450">
+         <include file="..\..\..\usb\otg\inc\usb_core.h"/>
+         <include file="..\..\..\usb\otg\inc\usb_hcd.h"/>
+         <include file="..\..\..\usb\usb_conf.h"/>
+         <include file="..\..\..\drivers\cat\usb\usbd_bsp.h"/>
+      </source>
+      <source file="..\..\..\drivers\audio\filters\iir_2_3k.h" lastModified="14beb5b4450">
+      </source>
+      <source file="..\..\..\drivers\ui\lcd\waterfall_colours.h" lastModified="14dbfce7c10">
+      </source>
+      <source file="..\..\..\drivers\keyboard\usb\usbh_conf.h" lastModified="14beb5b4450">
+      </source>
+      <source file="..\..\..\usb\usbh\core\src\usbh_ioreq.c" lastModified="14beb5b4450">
+         <include file="..\..\..\usb\usbh\core\inc\usbh_ioreq.h"/>
+      </source>
+      <source file="..\..\..\cmsis_lib\source\stm32f4xx_gpio.c" lastModified="14beb5b4450">
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_gpio.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
+      </source>
+      <source file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h" lastModified="14beb5b4450">
+         <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
+      </source>
+      <source file="..\..\..\cmsis_lib\include\stm32f4xx_adc.h" lastModified="14beb5b4450">
+         <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
+      </source>
+      <source file="..\..\..\cmsis_lib\source\stm32f4xx_i2c.c" lastModified="14beb5b4450">
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_i2c.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
+      </source>
+      <source file="..\..\..\cmsis_lib\include\stm32f4xx_fsmc.h" lastModified="14beb5b4450">
+         <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
+      </source>
+      <source file="..\..\..\usb\usbh\core\inc\usbh_def.h" lastModified="14beb5b4450">
+      </source>
+      <source file="..\..\..\usb\otg\inc\usb_dcd_int.h" lastModified="14beb5b4450">
+         <include file="..\..\..\usb\otg\inc\usb_dcd.h"/>
+      </source>
+      <source file="..\..\..\drivers\ui\ui_driver.h" lastModified="14f9dd88950">
+         <include file="..\..\..\hardware\mchf_board.h"/>
+      </source>
+      <source file="..\..\..\drivers\audio\filters\iir_10k.h" lastModified="14beb5b4450">
+      </source>
+      <source file="..\..\..\drivers\audio\audio_driver.h" lastModified="1645b7e86d8">
+         <include file="..\..\..\cmsis\arm_math.h"/>
+         <include file="..\..\..\drivers\ui\lcd\ui_lcd_hy28.h"/>
+      </source>
+      <source file="..\..\..\drivers\ui\ui_driver.c" lastModified="1645b85f9e6">
+         <include file="..\..\..\hardware\mchf_board.h"/>
+         <include file="..\..\..\cmsis\arm_math.h"/>
+         <include file="..\..\..\drivers\audio\codec\codec.h"/>
+         <include file="..\..\..\drivers\ui\ui_menu.h"/>
+         <include file="..\..\..\drivers\ui\lcd\waterfall_colours.h"/>
+         <include file="..\..\..\drivers\ui\lcd\ui_lcd_hy28.h"/>
+         <include file="..\..\..\drivers\ui\encoder\ui_rotary.h"/>
+         <include file="..\..\..\drivers\ui\oscillator\ui_si570.h"/>
+         <include file="..\..\..\drivers\ui\oscillator\ui_soft_tcxo.h"/>
+         <include file="..\..\..\drivers\audio\codec\codec.h"/>
+         <include file="..\..\..\drivers\audio\softdds\softdds.h"/>
+         <include file="..\..\..\drivers\audio\audio_driver.h"/>
+         <include file="..\..\..\drivers\ui\misc\hamm_wnd.h"/>
+         <include file="..\..\..\drivers\ui\ui_driver.h"/>
+         <include file="..\..\..\drivers\cat\cat_driver.h"/>
+         <include file="..\..\..\misc\v_eprom\eeprom.h"/>
+         <include file="..\..\..\drivers\audio\cw\cw_gen.h"/>
+         <include file="..\..\..\drivers\audio\filters\q_rx_filter_10kHz.h"/>
+         <include file="..\..\..\drivers\audio\filters\i_rx_filter_10kHz.h"/>
+         <include file="..\..\..\drivers\audio\filters\q_rx_filter_7kHz5.h"/>
+         <include file="..\..\..\drivers\audio\filters\i_rx_filter_7kHz5.h"/>
+         <include file="..\..\..\drivers\audio\filters\q_rx_filter_6kHz.h"/>
+         <include file="..\..\..\drivers\audio\filters\i_rx_filter_6kHz.h"/>
+         <include file="..\..\..\drivers\audio\filters\q_rx_filter_5kHz.h"/>
+         <include file="..\..\..\drivers\audio\filters\i_rx_filter_5kHz.h"/>
+         <include file="..\..\..\drivers\audio\filters\q_rx_filter_3k6.h"/>
+         <include file="..\..\..\drivers\audio\filters\i_rx_filter_3k6.h"/>
+         <include file="..\..\..\drivers\audio\filters\q_tx_filter.h"/>
+         <include file="..\..\..\drivers\audio\filters\i_tx_filter.h"/>
+         <include file="..\..\..\drivers\audio\filters\iq_rx_filter_am_10kHz.h"/>
+         <include file="..\..\..\drivers\audio\filters\iq_rx_filter_am_7kHz5.h"/>
+         <include file="..\..\..\drivers\audio\filters\iq_rx_filter_am_6kHz.h"/>
+         <include file="..\..\..\drivers\audio\filters\iq_rx_filter_am_5kHz.h"/>
+         <include file="..\..\..\drivers\audio\filters\iq_rx_filter_am_3k6.h"/>
+         <include file="..\..\..\drivers\audio\filters\iq_rx_filter_am_2k3.h"/>
+      </source>
+      <source file="..\..\..\drivers\keyboard\usb\usbh_usr.h" lastModified="14beb5b4838">
+         <include file="..\..\..\usb\usbh\core\inc\usbh_core.h"/>
+         <include file="..\..\..\usb\usb_conf.h"/>
+      </source>
+      <source file="..\..\..\drivers\audio\audio_driver.c" lastModified="164516b5ef6">
+         <include file="..\..\..\hardware\mchf_board.h"/>
+         <include file="..\..\..\drivers\audio\codec\codec.h"/>
+         <include file="..\..\..\drivers\audio\codec\i2s.h"/>
+         <include file="..\..\..\drivers\audio\cw\cw_gen.h"/>
+         <include file="..\..\..\drivers\audio\softdds\softdds.h"/>
+         <include file="..\..\..\drivers\audio\audio_driver.h"/>
+         <include file="..\..\..\drivers\ui\ui_driver.h"/>
+         <include file="..\..\..\drivers\audio\filters\iir_300hz.h"/>
+         <include file="..\..\..\drivers\audio\filters\iir_500hz.h"/>
+         <include file="..\..\..\drivers\audio\filters\iir_1_8k.h"/>
+         <include file="..\..\..\drivers\audio\filters\iir_2_3k.h"/>
+         <include file="..\..\..\drivers\audio\filters\iir_3_6k.h"/>
+         <include file="..\..\..\drivers\audio\filters\iir_10k.h"/>
+         <include file="..\..\..\drivers\audio\filters\iir_2k7_tx_bpf.h"/>
+         <include file="..\..\..\drivers\audio\filters\fir_rx_decimate_4.h"/>
+         <include file="..\..\..\drivers\audio\filters\fir_rx_decimate_4_min_lpf.h"/>
+         <include file="..\..\..\drivers\audio\filters\fir_rx_interpolate_16.h"/>
+         <include file="..\..\..\drivers\audio\filters\fir_rx_interpolate_16_10kHz.h"/>
+      </source>
+      <source file="..\..\..\usb\otg\src\usb_dcd.c" lastModified="14beb5b4450">
+         <include file="..\..\..\usb\otg\inc\usb_dcd.h"/>
+         <include file="..\..\..\drivers\cat\usb\usbd_bsp.h"/>
+      </source>
+      <source file="..\..\..\drivers\keyboard\usb\usbh_usr.c" lastModified="14beb5b4450">
+         <include file="..\..\..\hardware\mchf_board.h"/>
+         <include file="..\..\..\drivers\keyboard\usb\usbh_usr.h"/>
+         <include file="..\..\..\usb\usbh\class\HID\inc\usbh_hid_mouse.h"/>
+         <include file="..\..\..\usb\usbh\class\HID\inc\usbh_hid_keybd.h"/>
+      </source>
+      <source file="..\..\..\cmsis_lib\source\stm32f4xx_rcc.c" lastModified="14beb5b4450">
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
+      </source>
+      <source file="..\..\..\drivers\audio\filters\i_rx_filter_10kHz.h" lastModified="14beb5b4450">
+      </source>
+      <source file="..\..\..\cmsis_lib\source\stm32f4xx_adc.c" lastModified="14beb5b4450">
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_adc.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
+      </source>
+      <source file="..\..\..\usb\otg\src\usb_core.c" lastModified="14beb5b4450">
+         <include file="..\..\..\usb\otg\inc\usb_core.h"/>
+         <include file="..\..\..\drivers\cat\usb\usbd_bsp.h"/>
+      </source>
+      <source file="..\..\..\usb\usbd\core\src\usbd_ioreq.c" lastModified="14beb5b4450">
+         <include file="..\..\..\usb\usbd\core\inc\usbd_ioreq.h"/>
+      </source>
+      <source file="..\..\..\cmsis_lib\include\stm32f4xx_dma.h" lastModified="14beb5b4450">
+         <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
+      </source>
+      <source file="..\..\..\drivers\audio\filters\i_rx_filter_5kHz.h" lastModified="14ebf8d4f50">
+      </source>
+      <source file="..\..\..\cmsis_lib\source\stm32f4xx_wwdg.c" lastModified="14beb5b4450">
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_wwdg.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
+      </source>
+      <source file="..\..\..\drivers\audio\filters\i_tx_filter.h" lastModified="14beb5b4450">
+      </source>
+      <source file="..\..\..\usb\otg\src\usb_otg.c" lastModified="14beb5b4450">
+         <include file="..\..\..\usb\otg\inc\usb_defines.h"/>
+         <include file="..\..\..\usb\otg\inc\usb_regs.h"/>
+         <include file="..\..\..\usb\otg\inc\usb_core.h"/>
+         <include file="..\..\..\usb\otg\inc\usb_otg.h"/>
+      </source>
+      <source file="..\..\..\cmsis_lib\include\stm32f4xx_gpio.h" lastModified="14beb5b4450">
+         <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
+      </source>
+      <source file="..\..\..\usb\usbh\class\HID\src\usbh_hid_core.c" lastModified="14beb5b4450">
+         <include file="..\..\..\usb\usbh\class\HID\inc\usbh_hid_core.h"/>
+         <include file="..\..\..\usb\usbh\class\HID\inc\usbh_hid_mouse.h"/>
+         <include file="..\..\..\usb\usbh\class\HID\inc\usbh_hid_keybd.h"/>
+      </source>
+      <source file="..\..\..\hardware\mchf_hw_i2c2.h" lastModified="14beb5b4450">
+      </source>
+      <source file="..\..\..\hardware\mchf_hw_i2c2.c" lastModified="14beb5b4450">
+         <include file="..\..\..\hardware\mchf_board.h"/>
+         <include file="..\..\..\hardware\mchf_hw_i2c2.h"/>
+      </source>
+      <source file="..\..\..\drivers\audio\softdds\dds_table.h" lastModified="14beb5b4450">
+      </source>
+      <source file="..\..\..\drivers\ui\lcd\ui_lcd_hy28.h" lastModified="14da95bfa98">
+         <include file="..\..\..\cmsis\arm_math.h"/>
+         <include file="..\..\..\drivers\ui\ui_driver.h"/>
+      </source>
+      <source file="..\..\..\drivers\audio\filters\q_rx_filter_6kHz.h" lastModified="14ebfb74d50">
+      </source>
+      <source file="..\..\..\cmsis\arm_math.h" lastModified="14beb5b57d8">
+         <include file="..\..\..\cmsis\core_cm4.h"/>
+      </source>
+      <source file="..\..\..\drivers\ui\lcd\ui_lcd_hy28.c" lastModified="1645b792bdf">
+         <include file="..\..\..\hardware\mchf_board.h"/>
+         <include file="..\..\..\misc\v_eprom\eeprom.h"/>
+         <include file="..\..\..\drivers\ui\lcd\ui_lcd_hy28_fonts.h"/>
+         <include file="..\..\..\drivers\ui\lcd\ui_lcd_hy28.h"/>
+         <include file="..\..\..\drivers\ui\oscillator\ui_si570.h"/>
+         <include file="..\..\..\drivers\audio\audio_driver.h"/>
+      </source>
+      <source file="..\..\..\cmsis_lib\source\stm32f4xx_flash.c" lastModified="14beb5b4450">
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_flash.h"/>
+      </source>
+      <source file="..\..\..\cmsis_lib\source\stm32f4xx_dma.c" lastModified="14beb5b4450">
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_dma.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
+      </source>
+      <source file="..\..\..\drivers\cat\usb\usbd_usr.c" lastModified="14beb5b4838">
+         <include file="..\..\..\hardware\mchf_board.h"/>
+         <include file="..\..\..\usb\usbd\core\inc\usbd_usr.h"/>
+         <include file="..\..\..\usb\usbd\core\inc\usbd_ioreq.h"/>
+      </source>
+      <source file="..\..\..\cmsis_lib\include\stm32f4xx_pwr.h" lastModified="14beb5b4450">
+         <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
+      </source>
+      <source file="..\..\..\drivers\ui\oscillator\ui_soft_tcxo.h" lastModified="14beb5b4450">
+      </source>
+      <source file="..\..\..\cmsis_lib\source\stm32f4xx_usart.c" lastModified="14beb5b4450">
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_usart.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
+      </source>
+      <source file="..\..\..\main.c" lastModified="1645b785be9">
+         <include file="..\..\..\hardware\mchf_board.h"/>
+         <include file="..\..\..\drivers\audio\audio_driver.h"/>
+         <include file="..\..\..\drivers\audio\cw\cw_gen.h"/>
+         <include file="..\..\..\drivers\ui\ui_driver.h"/>
+         <include file="..\..\..\drivers\ui\encoder\ui_rotary.h"/>
+         <include file="..\..\..\drivers\ui\lcd\ui_lcd_hy28.h"/>
+         <include file="..\..\..\drivers\keyboard\keyb_driver.h"/>
+         <include file="..\..\..\drivers\api\api_dsp.h"/>
+         <include file="..\..\..\drivers\audio\softdds\softdds.h"/>
+         <include file="..\..\..\misc\v_eprom\eeprom.h"/>
+      </source>
+      <source file="..\..\..\cmsis_lib\include\stm32f4xx_wwdg.h" lastModified="14beb5b4450">
+         <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
+      </source>
+      <source file="..\..\..\usb\usbh\core\inc\usbh_ioreq.h" lastModified="14beb5b4450">
+         <include file="..\..\..\usb\usb_conf.h"/>
+         <include file="..\..\..\usb\usbh\core\inc\usbh_core.h"/>
+         <include file="..\..\..\usb\usbh\core\inc\usbh_def.h"/>
+      </source>
+      <source file="..\..\..\drivers\audio\filters\fir_rx_decimate_4_min_lpf.h" lastModified="14beb5b4450">
+      </source>
+      <source file="..\..\..\usb\usb_conf.h" lastModified="14beb5b4450">
+         <include file="..\..\..\hardware\mchf_board.h"/>
+      </source>
+      <source file="..\..\..\usb\otg\inc\usb_hcd.h" lastModified="14beb5b4450">
+         <include file="..\..\..\usb\otg\inc\usb_regs.h"/>
+         <include file="..\..\..\usb\otg\inc\usb_core.h"/>
+      </source>
+      <source file="..\..\..\hardware\mchf_board.h" lastModified="1645b83a4f7">
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_gpio.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_exti.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_usart.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_syscfg.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_spi.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_dma.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_i2c.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_adc.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_dac.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_tim.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_rtc.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_pwr.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_fsmc.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_wwdg.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_flash.h"/>
+         <include file="..\..\..\cmsis_lib\include\misc.h"/>
+         <include file="..\..\..\cmsis\core_cm4.h"/>
+         <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
+         <include file="..\..\..\hardware\mchf_types.h"/>
+      </source>
+      <source file="..\..\..\hardware\mchf_board.c" lastModified="14ec6458268">
+         <include file="..\..\..\hardware\mchf_board.h"/>
+         <include file="..\..\..\hardware\mchf_hw_i2c.h"/>
+         <include file="..\..\..\hardware\mchf_hw_i2c2.h"/>
+         <include file="..\..\..\drivers\ui\encoder\ui_rotary.h"/>
+         <include file="..\..\..\drivers\ui\lcd\ui_lcd_hy28.h"/>
+         <include file="..\..\..\drivers\ui\ui_driver.h"/>
+         <include file="..\..\..\drivers\audio\codec\codec.h"/>
+         <include file="..\..\..\drivers\ui\oscillator\ui_si570.h"/>
+         <include file="..\..\..\misc\v_eprom\eeprom.h"/>
+      </source>
+      <source file="..\..\..\usb\usbh\class\HID\src\usbh_hid_mouse.c" lastModified="14beb5b4450">
+         <include file="..\..\..\usb\usbh\class\HID\inc\usbh_hid_mouse.h"/>
+      </source>
+      <source file="..\..\..\cmsis_lib\source\stm32f4xx_pwr.c" lastModified="14beb5b4450">
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_pwr.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
+      </source>
+      <source file="..\..\..\drivers\ui\misc\hamm_wnd.h" lastModified="14beb5b4450">
+      </source>
+      <source file="..\..\..\drivers\keyboard\keyb_driver.h" lastModified="14beb5b4450">
+      </source>
+      <source file="..\..\..\drivers\audio\codec\codec.h" lastModified="14beb5b4450">
+      </source>
+      <source file="..\..\..\stdio\printf.c" lastModified="14beb5b4c20">
+         <include file="..\..\..\hardware\mchf_board.h"/>
+      </source>
+      <source file="..\..\..\drivers\audio\filters\i_rx_filter_6kHz.h" lastModified="14ebf86cf40">
+      </source>
+      <source file="..\..\..\cmsis\core_cmInstr.h" lastModified="14beb5b4838">
+      </source>
+      <source file="..\..\..\drivers\keyboard\keyb_driver.c" lastModified="14beb5b4450">
+         <include file="..\..\..\hardware\mchf_board.h"/>
+         <include file="..\..\..\drivers\keyboard\usb\usbh_bsp.h"/>
+         <include file="..\..\..\usb\usbh\core\inc\usbh_core.h"/>
+         <include file="..\..\..\drivers\keyboard\usb\usbh_usr.h"/>
+         <include file="..\..\..\usb\usbh\class\HID\inc\usbh_hid_core.h"/>
+         <include file="..\..\..\drivers\keyboard\keyb_driver.h"/>
+      </source>
+      <source file="..\..\..\drivers\audio\filters\fir_rx_interpolate_16.h" lastModified="14beb5b4450">
+      </source>
+      <source file="..\..\..\drivers\audio\codec\codec.c" lastModified="14beb5b4838">
+         <include file="..\..\..\hardware\mchf_board.h"/>
+         <include file="..\..\..\drivers\audio\audio_driver.h"/>
+         <include file="..\..\..\hardware\mchf_hw_i2c2.h"/>
+         <include file="..\..\..\drivers\audio\codec\codec.h"/>
+      </source>
+      <source file="..\..\..\usb\usbd\core\src\usbd_req.c" lastModified="14beb5b4450">
+         <include file="..\..\..\usb\usbd\core\inc\usbd_req.h"/>
+         <include file="..\..\..\usb\usbd\core\inc\usbd_ioreq.h"/>
+         <include file="..\..\..\drivers\cat\usb\usbd_desc.h"/>
+      </source>
+      <source file="..\..\..\usb\otg\inc\usb_defines.h" lastModified="14beb5b4450">
+         <include file="..\..\..\usb\usb_conf.h"/>
+      </source>
+      <source file="..\..\..\usb\usbd\core\inc\usbd_def.h" lastModified="14beb5b4450">
+         <include file="..\..\..\drivers\cat\usb\usbd_conf.h"/>
+      </source>
+      <source file="..\..\..\usb\usbh\core\src\usbh_hcs.c" lastModified="14beb5b4450">
+         <include file="..\..\..\usb\usbh\core\inc\usbh_hcs.h"/>
+      </source>
+      <source file="..\..\..\drivers\audio\filters\q_rx_filter_7kHz5.h" lastModified="14ebfb793a0">
+      </source>
+      <source file="..\..\..\usb\usbh\core\inc\usbh_stdreq.h" lastModified="14beb5b4450">
+         <include file="..\..\..\usb\usb_conf.h"/>
+         <include file="..\..\..\usb\otg\inc\usb_hcd.h"/>
+         <include file="..\..\..\usb\usbh\core\inc\usbh_core.h"/>
+         <include file="..\..\..\usb\usbh\core\inc\usbh_def.h"/>
+      </source>
+      <source file="..\..\..\usb\usbh\core\inc\usbh_core.h" lastModified="14beb5b4450">
+         <include file="..\..\..\usb\otg\inc\usb_hcd.h"/>
+         <include file="..\..\..\usb\usbh\core\inc\usbh_def.h"/>
+         <include file="..\..\..\drivers\keyboard\usb\usbh_conf.h"/>
+      </source>
+      <source file="..\..\..\usb\usbd\class\cdc\src\usbd_cdc_core.c" lastModified="14beb5b4450">
+         <include file="..\..\..\usb\usbd\class\cdc\inc\usbd_cdc_core.h"/>
+         <include file="..\..\..\drivers\cat\usb\usbd_desc.h"/>
+         <include file="..\..\..\usb\usbd\core\inc\usbd_req.h"/>
+      </source>
+      <source file="..\..\..\usb\usbh\class\HID\inc\usbh_hid_core.h" lastModified="14beb5b4450">
+         <include file="..\..\..\usb\usbh\core\inc\usbh_core.h"/>
+         <include file="..\..\..\usb\usbh\core\inc\usbh_stdreq.h"/>
+         <include file="..\..\..\drivers\keyboard\usb\usbh_bsp.h"/>
+         <include file="..\..\..\usb\usbh\core\inc\usbh_ioreq.h"/>
+         <include file="..\..\..\usb\usbh\core\inc\usbh_hcs.h"/>
+      </source>
+      <source file="..\..\..\usb\otg\inc\usb_hcd_int.h" lastModified="14beb5b4450">
+         <include file="..\..\..\usb\otg\inc\usb_hcd.h"/>
+      </source>
+      <source file="..\..\..\cmsis_boot\startup\startup_stm32f4xx.c" lastModified="14beb5b4450">
+      </source>
+      <source file="..\..\..\drivers\audio\filters\iq_rx_filter_am_7kHz5.h" lastModified="14ebfad9120">
+      </source>
+      <source file="..\..\..\usb\otg\src\usb_dcd_int.c" lastModified="14beb5b4450">
+         <include file="..\..\..\usb\otg\inc\usb_dcd_int.h"/>
+      </source>
+      <source file="..\..\..\drivers\api\api_dsp.h" lastModified="1645b830d39">
+      </source>
+      <source file="..\..\..\usb\usbh\core\src\usbh_core.c" lastModified="14beb5b4450">
+         <include file="..\..\..\usb\usbh\core\inc\usbh_ioreq.h"/>
+         <include file="..\..\..\drivers\keyboard\usb\usbh_bsp.h"/>
+         <include file="..\..\..\usb\usbh\core\inc\usbh_hcs.h"/>
+         <include file="..\..\..\usb\usbh\core\inc\usbh_stdreq.h"/>
+         <include file="..\..\..\usb\usbh\core\inc\usbh_core.h"/>
+         <include file="..\..\..\usb\otg\inc\usb_hcd_int.h"/>
+      </source>
+      <source file="..\..\..\usb\usbd\core\inc\usbd_ioreq.h" lastModified="14beb5b4450">
+         <include file="..\..\..\usb\usbd\core\inc\usbd_def.h"/>
+         <include file="..\..\..\usb\usbd\core\inc\usbd_core.h"/>
+      </source>
+      <source file="..\..\..\drivers\api\api_dsp.c" lastModified="1645b878fb3">
+         <include file="..\..\..\hardware\mchf_board.h"/>
+         <include file="..\..\..\drivers\audio\audio_driver.h"/>
+         <include file="..\..\..\drivers\ui\encoder\ui_rotary.h"/>
+      </source>
+      <source file="..\..\..\drivers\keyboard\usb\usbh_bsp.h" lastModified="14beb5b4450">
+         <include file="..\..\..\usb\otg\inc\usb_core.h"/>
+         <include file="..\..\..\usb\usb_conf.h"/>
+      </source>
+      <source file="..\..\..\usb\otg\inc\usb_dcd.h" lastModified="14beb5b4450">
+         <include file="..\..\..\usb\otg\inc\usb_core.h"/>
+      </source>
+      <source file="..\..\..\drivers\audio\filters\iq_rx_filter_am_5kHz.h" lastModified="14ebfac7010">
+      </source>
+      <source file="..\..\..\cmsis_lib\include\stm32f4xx_spi.h" lastModified="14beb5b4450">
+         <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
+      </source>
+      <source file="..\..\..\drivers\keyboard\usb\usbh_bsp.c" lastModified="14beb5b4450">
+         <include file="..\..\..\hardware\mchf_board.h"/>
+         <include file="..\..\..\drivers\keyboard\usb\usbh_bsp.h"/>
+         <include file="..\..\..\usb\usb_conf.h"/>
+      </source>
+      <source file="..\..\..\cmsis_lib\source\stm32f4xx_syscfg.c" lastModified="14beb5b4450">
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_syscfg.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
+      </source>
+      <source file="..\..\..\cmsis_boot\stm32f4xx.h" lastModified="14beb5b4838">
+         <include file="..\..\..\cmsis\core_cm4.h"/>
+         <include file="..\..\..\cmsis_boot\system_stm32f4xx.h"/>
+         <include file="..\..\..\cmsis_boot\stm32f4xx_conf.h"/>
+      </source>
+      <source file="..\..\..\drivers\audio\filters\q_rx_filter_10kHz.h" lastModified="14beb5b4450">
+      </source>
+      <source file="..\..\..\cmsis_lib\include\stm32f4xx_dac.h" lastModified="14beb5b4450">
+         <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
+      </source>
+      <source file="..\..\..\misc\v_eprom\eeprom.h" lastModified="14f61576e60">
+         <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
+      </source>
+      <source file="..\..\..\usb\otg\inc\usb_otg.h" lastModified="14beb5b4450">
+      </source>
+      <source file="..\..\..\misc\v_eprom\eeprom.c" lastModified="14beb5b4450">
+         <include file="..\..\..\hardware\mchf_board.h"/>
+         <include file="..\..\..\misc\v_eprom\eeprom.h"/>
+      </source>
+      <source file="..\..\..\drivers\audio\filters\iq_rx_filter_am_10kHz.h" lastModified="14beb5b4450">
+      </source>
+      <source file="..\..\..\usb\usbh\class\HID\src\usbh_hid_keybd.c" lastModified="14beb5b4450">
+         <include file="..\..\..\usb\usbh\class\HID\inc\usbh_hid_keybd.h"/>
+      </source>
+      <source file="..\..\..\usb\usbd\core\inc\usbd_usr.h" lastModified="14beb5b4450">
+         <include file="..\..\..\usb\usbd\core\inc\usbd_core.h"/>
+      </source>
+      <source file="..\..\..\cmsis_lib\include\stm32f4xx_flash.h" lastModified="14beb5b4450">
+         <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
+      </source>
+      <source file="..\..\..\drivers\cat\usb\usbd_desc.h" lastModified="14beb5b4450">
+         <include file="..\..\..\usb\usbd\core\inc\usbd_def.h"/>
+      </source>
+      <source file="..\..\..\drivers\cat\usb\usbd_desc.c" lastModified="14beb5b4450">
+         <include file="..\..\..\usb\usbd\core\inc\usbd_core.h"/>
+         <include file="..\..\..\drivers\cat\usb\usbd_desc.h"/>
+         <include file="..\..\..\usb\usbd\core\inc\usbd_req.h"/>
+         <include file="..\..\..\drivers\cat\usb\usbd_conf.h"/>
+         <include file="..\..\..\usb\otg\inc\usb_regs.h"/>
+      </source>
+      <source file="..\..\..\cmsis_boot\stm32f4xx_conf.h" lastModified="14beb5b6778">
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_dac.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_dma.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_exti.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_flash.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_fsmc.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_gpio.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_i2c.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_pwr.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_rtc.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_spi.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_syscfg.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_tim.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_usart.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_wwdg.h"/>
+         <include file="..\..\..\cmsis_lib\include\misc.h"/>
+      </source>
+      <source file="..\..\..\cmsis_lib\source\misc.c" lastModified="14beb5b4450">
+         <include file="..\..\..\cmsis_lib\include\misc.h"/>
+      </source>
+      <source file="..\..\..\usb\otg\inc\usb_core.h" lastModified="14beb5b4450">
+         <include file="..\..\..\usb\usb_conf.h"/>
+         <include file="..\..\..\usb\otg\inc\usb_regs.h"/>
+         <include file="..\..\..\usb\otg\inc\usb_defines.h"/>
+      </source>
+      <source file="..\..\..\cmsis_lib\source\stm32f4xx_spi.c" lastModified="14beb5b4450">
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_spi.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
+      </source>
+      <source file="..\..\..\drivers\cat\cat_driver.h" lastModified="14beb5b4450">
+      </source>
+      <source file="..\..\..\drivers\cat\cat_driver.c" lastModified="14beb5b4838">
+         <include file="..\..\..\hardware\mchf_board.h"/>
+         <include file="..\..\..\usb\usbd\class\cdc\inc\usbd_cdc_core.h"/>
+         <include file="..\..\..\usb\usbd\core\inc\usbd_usr.h"/>
+         <include file="..\..\..\usb\usb_conf.h"/>
+         <include file="..\..\..\drivers\cat\usb\usbd_desc.h"/>
+         <include file="..\..\..\drivers\cat\cat_driver.h"/>
+      </source>
+      <source file="..\..\..\cmsis_lib\include\stm32f4xx_usart.h" lastModified="14beb5b4450">
+         <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
+      </source>
+      <source file="..\..\..\cmsis_lib\source\stm32f4xx_dac.c" lastModified="14beb5b4450">
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_dac.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
+      </source>
+      <source file="..\..\..\drivers\cat\usb\usbd_bsp.h" lastModified="14beb5b4450">
+         <include file="..\..\..\usb\otg\inc\usb_core.h"/>
+         <include file="..\..\..\usb\usb_conf.h"/>
+      </source>
+      <source file="..\..\..\drivers\cat\usb\usbd_bsp.c" lastModified="14beb5b4450">
+         <include file="..\..\..\drivers\cat\usb\usbd_bsp.h"/>
+         <include file="..\..\..\drivers\cat\usb\usbd_conf.h"/>
+      </source>
+      <source file="..\..\..\cmsis_boot\system_stm32f4xx.h" lastModified="14beb5b4450">
+      </source>
+      <source file="..\..\..\cmsis_lib\include\stm32f4xx_tim.h" lastModified="14beb5b4450">
+         <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
+      </source>
+      <source file="..\..\..\cmsis_boot\system_stm32f4xx.c" lastModified="14beb5b4450">
+         <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
+      </source>
+      <source file="..\..\..\cmsis\core_cm4.h" lastModified="14beb5b4838">
+         <include file="..\..\..\cmsis\core_cmInstr.h"/>
+         <include file="..\..\..\cmsis\core_cmFunc.h"/>
+         <include file="..\..\..\cmsis\core_cm4_simd.h"/>
+      </source>
+      <source file="..\..\..\cmsis_lib\source\stm32f4xx_exti.c" lastModified="14beb5b4450">
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_exti.h"/>
+      </source>
+      <source file="..\..\..\drivers\audio\filters\q_tx_filter.h" lastModified="14beb5b4450">
+      </source>
+      <source file="..\..\..\drivers\ui\oscillator\ui_si570.h" lastModified="14eb793b6e0">
+      </source>
+      <source file="..\..\..\usb\usbd\class\audio\inc\usbd_audio_core.h" lastModified="14beb5b4450">
+         <include file="..\..\..\usb\usbd\core\inc\usbd_ioreq.h"/>
+         <include file="..\..\..\usb\usbd\core\inc\usbd_req.h"/>
+         <include file="..\..\..\drivers\cat\usb\usbd_desc.h"/>
+      </source>
+      <source file="..\..\..\syscalls\syscalls.c" lastModified="14beb5b53f0">
+      </source>
+      <source file="..\..\..\cmsis_lib\include\stm32f4xx_rtc.h" lastModified="14beb5b4450">
+         <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
+      </source>
+      <source file="..\..\..\drivers\ui\oscillator\ui_si570.c" lastModified="14ec650f418">
+         <include file="..\..\..\hardware\mchf_board.h"/>
+         <include file="..\..\..\drivers\audio\codec\codec.h"/>
+         <include file="..\..\..\hardware\mchf_hw_i2c.h"/>
+         <include file="..\..\..\drivers\ui\oscillator\ui_si570.h"/>
+      </source>
+      <source file="..\..\..\drivers\ui\lcd\ui_lcd_hy28_fonts.h" lastModified="14beb5b4450">
+      </source>
+      <source file="..\..\..\usb\usbd\core\inc\usbd_core.h" lastModified="14beb5b4450">
+         <include file="..\..\..\usb\otg\inc\usb_dcd.h"/>
+         <include file="..\..\..\usb\usbd\core\inc\usbd_def.h"/>
+         <include file="..\..\..\drivers\cat\usb\usbd_conf.h"/>
+      </source>
+      <source file="..\..\..\hardware\mchf_hw_i2c.h" lastModified="14beb5b4450">
+      </source>
+      <source file="..\..\..\drivers\ui\lcd\ui_lcd_hy28_fonts.c" lastModified="14beb5b4450">
+         <include file="..\..\..\hardware\mchf_board.h"/>
+         <include file="..\..\..\drivers\ui\lcd\ui_lcd_hy28_fonts.h"/>
+      </source>
+      <source file="..\..\..\usb\usbh\core\src\usbh_stdreq.c" lastModified="14beb5b4450">
+         <include file="..\..\..\usb\usbh\core\inc\usbh_ioreq.h"/>
+         <include file="..\..\..\usb\usbh\core\inc\usbh_stdreq.h"/>
+      </source>
+      <source file="..\..\..\usb\usbd\class\cdc\inc\usbd_cdc_core.h" lastModified="14beb5b4450">
+         <include file="..\..\..\usb\usbd\core\inc\usbd_ioreq.h"/>
+      </source>
+      <source file="..\..\..\hardware\mchf_hw_i2c.c" lastModified="14beb5b4450">
+         <include file="..\..\..\hardware\mchf_board.h"/>
+         <include file="..\..\..\hardware\mchf_hw_i2c.h"/>
+      </source>
+      <source file="..\..\..\usb\otg\src\usb_hcd_int.c" lastModified="14beb5b4450">
+         <include file="..\..\..\usb\otg\inc\usb_core.h"/>
+         <include file="..\..\..\usb\otg\inc\usb_defines.h"/>
+         <include file="..\..\..\usb\otg\inc\usb_hcd_int.h"/>
+      </source>
+      <source file="..\..\..\drivers\cat\usb\usbd_cdc_vcp.h" lastModified="14beb5b4c20">
+         <include file="..\..\..\usb\usbd\class\cdc\inc\usbd_cdc_core.h"/>
+         <include file="..\..\..\drivers\cat\usb\usbd_conf.h"/>
+      </source>
+      <source file="..\..\..\drivers\audio\filters\iq_rx_filter_am_6kHz.h" lastModified="14ebfa76700">
+      </source>
+      <source file="..\..\..\drivers\audio\cw\cw_sm_tbl.h" lastModified="14beb5b4450">
+      </source>
+      <source file="..\..\..\drivers\cat\usb\usbd_cdc_vcp.c" lastModified="14beb5b4838">
+         <include file="..\..\..\hardware\mchf_board.h"/>
+         <include file="..\..\..\drivers\ui\ui_driver.h"/>
+         <include file="..\..\..\drivers\cat\usb\usbd_cdc_vcp.h"/>
+         <include file="..\..\..\usb\usb_conf.h"/>
+      </source>
+      <source file="..\..\..\cmsis_lib\include\misc.h" lastModified="14beb5b4450">
+         <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
+      </source>
+      <source file="..\..\..\cmsis_lib\include\stm32f4xx_syscfg.h" lastModified="14beb5b4450">
+         <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
+      </source>
+      <source file="..\..\..\cmsis_lib\source\stm32f4xx_tim.c" lastModified="14beb5b4450">
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_tim.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
+      </source>
+      <source file="..\..\..\drivers\audio\filters\iq_rx_filter_am_2k3.h" lastModified="14beb5b4450">
+      </source>
+      <source file="..\..\..\drivers\ui\ui_menu.h" lastModified="14f9ad553a0">
+      </source>
+      <source file="..\..\..\drivers\audio\filters\i_rx_filter_3k6.h" lastModified="14beb5b4450">
+      </source>
+      <source file="..\..\..\drivers\audio\filters\fir_rx_interpolate_16_10kHz.h" lastModified="14beb5b4450">
+      </source>
+      <source file="..\..\..\drivers\ui\ui_menu.c" lastModified="14faeab73a0">
+         <include file="..\..\..\hardware\mchf_board.h"/>
+         <include file="..\..\..\drivers\ui\ui_menu.h"/>
+         <include file="..\..\..\cmsis\arm_math.h"/>
+         <include file="..\..\..\drivers\audio\codec\codec.h"/>
+         <include file="..\..\..\drivers\ui\lcd\ui_lcd_hy28.h"/>
+         <include file="..\..\..\drivers\ui\encoder\ui_rotary.h"/>
+         <include file="..\..\..\drivers\audio\codec\codec.h"/>
+         <include file="..\..\..\drivers\audio\softdds\softdds.h"/>
+         <include file="..\..\..\drivers\audio\audio_driver.h"/>
+         <include file="..\..\..\drivers\ui\ui_driver.h"/>
+         <include file="..\..\..\drivers\ui\oscillator\ui_si570.h"/>
+         <include file="..\..\..\drivers\cat\cat_driver.h"/>
+         <include file="..\..\..\misc\v_eprom\eeprom.h"/>
+         <include file="..\..\..\drivers\audio\cw\cw_gen.h"/>
+      </source>
+      <source file="..\..\..\usb\otg\inc\usb_regs.h" lastModified="14beb5b4450">
+         <include file="..\..\..\usb\usb_conf.h"/>
+      </source>
+      <source file="..\..\..\usb\usbh\class\HID\inc\usbh_hid_mouse.h" lastModified="14beb5b4450">
+         <include file="..\..\..\usb\usbh\class\HID\inc\usbh_hid_core.h"/>
+      </source>
+      <source file="..\..\..\drivers\audio\softdds\softdds.h" lastModified="14da7962ad0">
+         <include file="..\..\..\cmsis\arm_math.h"/>
+      </source>
+      <source file="..\..\..\cmsis\core_cmFunc.h" lastModified="14beb5b4838">
+      </source>
+      <source file="..\..\..\hardware\mchf_types.h" lastModified="14beb5b4450">
+      </source>
+      <source file="..\..\..\usb\usbd\core\src\usbd_core.c" lastModified="14beb5b4450">
+         <include file="..\..\..\usb\usbd\core\inc\usbd_core.h"/>
+         <include file="..\..\..\usb\usbd\core\inc\usbd_req.h"/>
+         <include file="..\..\..\usb\usbd\core\inc\usbd_ioreq.h"/>
+         <include file="..\..\..\usb\otg\inc\usb_dcd_int.h"/>
+         <include file="..\..\..\drivers\cat\usb\usbd_bsp.h"/>
+      </source>
+      <source file="..\..\..\usb\usbd\class\audio\src\usbd_audio_core.c" lastModified="14beb5b4450">
+         <include file="..\..\..\usb\usbd\class\audio\inc\usbd_audio_core.h"/>
+         <include file="..\..\..\usb\usbd\class\audio\inc\usbd_audio_out_if.h"/>
+      </source>
+      <source file="..\..\..\drivers\audio\softdds\softdds.c" lastModified="14beb5b4838">
+         <include file="..\..\..\hardware\mchf_board.h"/>
+         <include file="..\..\..\drivers\audio\softdds\dds_table.h"/>
+         <include file="..\..\..\drivers\audio\softdds\softdds.h"/>
+      </source>
+      <source file="..\..\..\cmsis_lib\source\stm32f4xx_rtc.c" lastModified="14beb5b4450">
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_rtc.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
+      </source>
+      <source file="..\..\..\drivers\audio\filters\iir_500hz.h" lastModified="14beb5b4450">
+      </source>
+      <source file="..\..\..\drivers\audio\filters\iir_1_8k.h" lastModified="14beb5b4450">
+      </source>
+      <source file="..\..\..\drivers\audio\filters\fir_rx_decimate_4.h" lastModified="14dc09546b0">
+      </source>
+      <source file="..\..\..\cmsis\core_cm4_simd.h" lastModified="14beb5b4838">
+      </source>
+      <source file="..\..\..\drivers\ui\encoder\ui_rotary.h" lastModified="14cecb7d1a0">
+      </source>
+   </includePath>
+</dependencies>
