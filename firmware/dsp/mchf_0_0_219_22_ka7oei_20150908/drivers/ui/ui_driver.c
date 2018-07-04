@@ -6406,6 +6406,14 @@ static void UiDriverReDrawSpectrumDisplay(void)
 	if((!sd.enabled) || (ts.hold_off_spectrum_scope > ts.sysclock) || (ts.lcd_blanking_flag))
 		return;
 
+	// Frequency update has higher priority than spectrum update
+	//if(sd.dial_moved)
+	//{
+		//api_dsp_post(NULL);	// post frequency update only
+		//sd.dial_moved = 0;
+		//return;
+	//}
+
 	// enough samples collected ?
 	if(sd.state != 1)
 		return;
@@ -6482,19 +6490,23 @@ static void UiDriverReDrawSpectrumDisplay(void)
 	filt_factor = (float)ts.scope_filter;		// use stored filter setting
 	filt_factor = 1/filt_factor;		// invert filter factor to allow multiplication
 	//
-	if(sd.dial_moved)
-	{	// Clear filter data if dial was moved in steps greater than 1 kHz
-		sd.dial_moved = 0;	// Dial moved - reset indicator
-		if(df.tuning_step > 1000)
-		{	// was tuning step greater than 1kHz?
-				arm_copy_f32((float32_t *)sd_FFT_MagData, (float32_t *)sd_FFT_AVGData, FFT_IQ_BUFF_LEN1/2);	// yes - copy current data into average buffer
-		}
+//	if(sd.dial_moved)
+//	{	// Clear filter data if dial was moved in steps greater than 1 kHz
+//		sd.dial_moved = 0;	// Dial moved - reset indicator
+//		if(df.tuning_step > 1000)
+//		{	// was tuning step greater than 1kHz?
+//				arm_copy_f32((float32_t *)sd_FFT_MagData, (float32_t *)sd_FFT_AVGData, FFT_IQ_BUFF_LEN1/2);	// yes - copy current data into average buffer
+//		}
 		//
 //!		UiDrawSpectrumScopeFrequencyBarText();	// redraw frequency bar on the bottom of the display
 		//
-	}
-	else
-	{	// dial was not moved - do normal IIR lowpass filtering to "smooth" display
+
+		//api_dsp_post(NULL);
+		//sd.state = 0;
+		//return;
+	//}
+	//else
+	//{	// dial was not moved - do normal IIR lowpass filtering to "smooth" display
 		arm_scale_f32((float32_t *)sd_FFT_AVGData, (float32_t)filt_factor, (float32_t *)sd.FFT_Samples, FFT_IQ_BUFF_LEN1/2);	// get scaled version of previous data
 		arm_sub_f32((float32_t *)sd_FFT_AVGData, (float32_t *)sd.FFT_Samples, (float32_t *)sd_FFT_AVGData, FFT_IQ_BUFF_LEN1/2);	// subtract scaled information from old, average data
 		arm_scale_f32((float32_t *)sd_FFT_MagData, (float32_t)filt_factor, (float32_t *)sd.FFT_Samples, FFT_IQ_BUFF_LEN1/2);	// get scaled version of new, input data
@@ -6505,7 +6517,7 @@ static void UiDriverReDrawSpectrumDisplay(void)
 			if(sd_FFT_AVGData[i] < 1)
 				sd_FFT_AVGData[i] = 1;
 		}
-	}
+	//}
 
 	// ---------------------------------------------------------------------------------------------------------------------------------
 	// ------- 4

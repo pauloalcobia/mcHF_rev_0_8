@@ -25,11 +25,21 @@ extern __IO TransceiverState 		ts;
 
 // ------------------------------------------------
 // Spectrum display
-//extern __IO	SpectrumDisplay		sd;
+extern __IO	SpectrumDisplay			sd;
 
 // ------------------------------------------------
 // Frequency public
 extern __IO DialFrequency 			df;
+
+
+// ------------------------------------------------
+uchar ou_buffer[300];
+uchar in_buffer[300];
+
+uchar api_drv_dissabled = 0;
+uchar pub_v = 0;
+uchar led_s = 0;
+ulong pro_s = 0;
 
 //*----------------------------------------------------------------------------
 //* Function Name       : UiLcdHy28_SpiInit
@@ -119,14 +129,16 @@ void api_dsp_init(void)
 	//printf("api driver init...\n\r");
 
 	api_dsp_spi_init();
-
-
 }
 
-uchar pub_v = 0;
-uchar led_s = 0;
-ulong pro_s = 0;
-
+//*----------------------------------------------------------------------------
+//* Function Name       : api_dsp_thread
+//* Object              : blink leds and update alive flag
+//* Notes    			:
+//* Notes   			:
+//* Notes    			:
+//* Context    			: CONTEXT_RESET_VECTOR
+//*----------------------------------------------------------------------------
 void api_dsp_thread(void)
 {
 	if(pro_s < 50000)
@@ -136,21 +148,39 @@ void api_dsp_thread(void)
 	}
 	pro_s = 0;
 
-	if(led_s)
-		mchf_board_red_led(1);
+	if(api_drv_dissabled)
+	{
+		__asm(".word 0x46004600");
+		__asm(".word 0x46004600");
+		__asm(".word 0x46004600");
+		__asm(".word 0x46004600");
+	}
 	else
-		mchf_board_red_led(0);
+	{
+		if(led_s)
+			mchf_board_red_led(1);
+		else
+			mchf_board_red_led(0);
+	}
 
 	led_s = !led_s;
 }
 
-uchar ou_buffer[300];
-uchar in_buffer[300];
-
+//*----------------------------------------------------------------------------
+//* Function Name       : api_dsp_post
+//* Object              : send and receive
+//* Notes    			:
+//* Notes   			:
+//* Notes    			:
+//* Context    			: CONTEXT_UI_DRIVER
+//*----------------------------------------------------------------------------
 void api_dsp_post(q15_t *fft)
 {
 	ulong k;
 	ulong tune_loc;
+
+	if(api_drv_dissabled)
+		return;
 
 	tune_loc = df.tune_old;
 
@@ -216,6 +246,16 @@ void api_dsp_post(q15_t *fft)
 	{
 		// value = DEFAULT_AUDIO_GAIN;
 		ts.audio_gain = in_buffer[1];
+	}
+
+	// Set demodulator mode
+	if(in_buffer[2] <= DEMOD_MAX_MODE)
+		ts.dmod_mode = in_buffer[2];
+	else
+	{
+		// Test - stop driver
+		if(in_buffer[2] == 0x77)
+			api_drv_dissabled = 1;
 	}
 
 	pub_v++;
