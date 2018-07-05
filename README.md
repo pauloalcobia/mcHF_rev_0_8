@@ -14,6 +14,6 @@ out, and moved to the new application CPU.
 
 There is still a lot of testing on the hardware left, as there are new ideas i am trying
 to implement, but during the next 3-4 months i hope to be able to upload all
-documentation and sources, as long as they become in presentable form.
+documentation and sources, as soon as they become somewhat presentable.
 
 73!
