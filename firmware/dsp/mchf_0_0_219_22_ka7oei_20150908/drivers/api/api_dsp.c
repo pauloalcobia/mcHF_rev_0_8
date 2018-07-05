@@ -8,7 +8,7 @@
 **                                                                                 **
 **  File name:      api_dsp.c                                                      **
 **  Description:    the very first version of the hook api driver                  **
-**  Last Modified:  02 July 2018                                                   **
+**  Last Modified:  05 July 2018                                                   **
 **  Licence:		For radio amateurs experimentation, non-commercial use only!   **
 ************************************************************************************/
 
@@ -127,7 +127,7 @@ static uchar api_dsp_SendByteSpiA(uint8_t byte)
 void api_dsp_init(void)
 {
 	//printf("api driver init...\n\r");
-
+	ts.api_band = 0;
 	api_dsp_spi_init();
 }
 
@@ -157,10 +157,10 @@ void api_dsp_thread(void)
 	}
 	else
 	{
-		if(led_s)
-			mchf_board_red_led(1);
-		else
-			mchf_board_red_led(0);
+		//if(led_s)
+		//	mchf_board_red_led(1);
+		//else
+		//	mchf_board_red_led(0);
 	}
 
 	led_s = !led_s;
@@ -182,7 +182,7 @@ void api_dsp_post(q15_t *fft)
 	if(api_drv_dissabled)
 		return;
 
-	tune_loc = df.tune_old;
+	tune_loc = df.tune_new;
 
 	// Clear buffer
 	for(k = 0; k < 300;k++)
@@ -207,15 +207,18 @@ void api_dsp_post(q15_t *fft)
 	ou_buffer[0x0A] = tune_loc >>  8;
 	ou_buffer[0x0B] = tune_loc >>  0;
 
+	ou_buffer[0x0C] = ts.dmod_mode;
+	//ou_buffer[0x0D] = ts.band;
+
 	if(fft != NULL)
 	{
 		// Left part of screen
 		for(k = 0; k < 128;k++)
-			ou_buffer[k + 0x0C] = (uchar)*(fft + k + 128);
+			ou_buffer[k + 0x28] = (uchar)*(fft + k + 128);
 
 		// Right part of screen
 		for(k = 0; k < 128;k++)
-			ou_buffer[k + 128 + 0x0C] = (uchar)*(fft + k + 0);
+			ou_buffer[k + 128 + 0x28] = (uchar)*(fft + k + 0);
 	}
 
 	// Footer
@@ -254,9 +257,14 @@ void api_dsp_post(q15_t *fft)
 	else
 	{
 		// Test - stop driver
-		if(in_buffer[2] == 0x77)
-			api_drv_dissabled = 1;
+		//--if(in_buffer[2] == 0x77)
+		//--	api_drv_dissabled = 1;
 	}
+
+	// ---------------------------------------------------------------
+	// Make it change band
+	if((in_buffer[3] != ts.band) && (in_buffer[3] <= MAX_BANDS))
+		ts.api_band = in_buffer[3];
 
 	pub_v++;
 }

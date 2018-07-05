@@ -45,7 +45,7 @@
 #define 	TRX4M_VER_MAJOR			219
 #define 	TRX4M_VER_MINOR			22
 #define 	TRX4M_VER_RELEASE		0
-#define 	TRX4M_VER_BUILD			11
+#define 	TRX4M_VER_BUILD			14
 
 //
 #define		ATTRIB_STRING1			"Additional Contributions by"
@@ -1123,6 +1123,9 @@ typedef struct TransceiverState
 	// Ham band public flag
 	// index of bands table in Flash
 	uchar 	band;
+	#ifdef DSP_MODE
+	uchar 	api_band;
+	#endif
 	bool	band_change;
 	uchar	filter_band;		// filter selection band:  1= 80, 2= 60/40, 3=30/20, 4=17/15/12/10 - used for selection of power detector coefficient selection.
 	//

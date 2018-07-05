@@ -110,6 +110,7 @@ static uchar 	UiDriverButtonCheck(ulong button_num);
 static void		UiDriverTimeScheduler(void);				// Also handles audio gain and switching of audio on return from TX back to RX
 static void 	UiDriverChangeDemodMode(uchar noskip);
 static void 	UiDriverChangeBand(uchar is_up);
+static void 	UiDriverChangeBandA(void);
 static bool 	UiDriverCheckFrequencyEncoder(void);
 static void 	UiDriverCheckEncoderOne(void);
 static void 	UiDriverCheckEncoderTwo(void);
@@ -391,8 +392,6 @@ static float 			FirState_Q_TX[128];
 extern __IO	arm_fir_instance_f32	FIR_Q_TX;
 //
 
-
-
 //*----------------------------------------------------------------------------
 //* Function Name       : ui_driver_init
 //* Object              :
@@ -413,14 +412,19 @@ void ui_driver_init(void)
 	// Driver publics init
 	UiDriverPublicsInit();
 
+#ifndef DSP_MODE
 	// Load stored data from eeprom - some are needed for initialization
 	UiDriverLoadEepromValues();
+#endif
 
 	// Init frequency publics
 	UiDriverInitFrequency();
 
+#ifndef DSP_MODE
 	// Load stored data from eeprom - again - as some of the values above would have been overwritten from the above
 	UiDriverLoadEepromValues();
+#endif
+
 	//
 	UiCalcTxCompLevel();		// calculate current settings for TX speech compressor
 	//
@@ -570,6 +574,15 @@ void ui_driver_thread(void)
 			return;
 	}
 	drv_state++;
+
+	// -------------------------------
+	// API driver action requests
+	if(ts.band != ts.api_band)
+	{
+		mchf_board_red_led(1);
+		UiDriverChangeBandA();
+		mchf_board_red_led(0);
+	}
 
 }
 // **************************  OBSOLETE  ***************************************
@@ -4713,6 +4726,156 @@ static void UiDriverChangeBand(uchar is_up)
 		UiDriverUpdateFrequency(1,2);	// update RX frequency
 	}
 	else	// not in SPLIT mode - standard update
+		UiDriverUpdateFrequency(1,0);
+	//
+	ts.refresh_freq_disp = 0;
+}
+
+//*----------------------------------------------------------------------------
+//* Function Name       : UiDriverChangeBandA
+//* Object              : change band via API driver ts.band flag update
+//* Input Parameters    :
+//* Output Parameters   :
+//* Functions called    :
+//*----------------------------------------------------------------------------
+static void UiDriverChangeBandA(void)
+{
+	ulong 	curr_band_index;	// index in band table of currently selected band
+	ulong	new_band_index;		// index of the new selected band
+
+	ulong 	new_band_freq;		// new dial frequency
+
+
+	//printf("-----------> change band\n\r");
+
+	// Do not allow band change during TX
+	if(ts.txrx_mode == TRX_MODE_TX)
+		return;
+
+	Codec_Volume(0);		// Turn volume down to suppress click
+	ts.band_change = 1;		// indicate that we need to turn the volume back up after band change
+	ads.agc_holder = ads.agc_val;	// save the current AGC value to reload after the band change so that we can better recover
+									// from the loud "POP" that will occur when we change bands
+
+	curr_band_index = ts.band;
+
+	//printf("current index: %d and freq: %d\n\r",curr_band_index,tune_bands[ts.band]);
+
+	// Save old band values
+	if(curr_band_index < (MAX_BANDS))
+	{
+		// Save dial
+		band_dial_value[curr_band_index] = df.tune_old;
+
+		// Save decode mode
+		band_decod_mode[curr_band_index] = ts.dmod_mode;
+
+		// Save filter setting
+		band_filter_mode[curr_band_index] = ts.filter_id;
+
+		//printf("saved freq: %d and mode: %d\n\r",band_dial_value[curr_band_index],band_decod_mode[curr_band_index]);
+	}
+
+	// Handle direction
+/*	if(is_up)
+	{
+		if(curr_band_index < (MAX_BANDS - 1))
+		{
+			//printf("going up band\n\r");
+
+			// Increase
+			new_band_freq  = tune_bands[curr_band_index + 1];
+			new_band_index = curr_band_index + 1;
+		}
+		else	{	// wrap around to the lowest band
+			new_band_freq = tune_bands[MIN_BANDS];
+			new_band_index = MIN_BANDS;
+		}
+	}
+	else
+	{
+		if(curr_band_index)
+		{
+			//printf("going down band\n\r");
+
+			// Decrease
+			new_band_freq  = tune_bands[curr_band_index - 1];
+			new_band_index = curr_band_index - 1;
+		}
+		else	{	// wrap around to the highest band
+			new_band_freq = tune_bands[MAX_BANDS - 1];
+			new_band_index = MAX_BANDS -1;
+		}
+	}*/
+
+	new_band_freq  = tune_bands[ts.api_band];
+	new_band_index = ts.api_band;
+
+	//printf("new band index: %d and freq: %d\n\r",new_band_index,new_band_freq);
+	//
+	// Load frequency value - either from memory or default for
+	// the band if this is first band selection
+	if(band_dial_value[new_band_index] != 0xFFFFFFFF)
+	{
+		//printf("load value from memory\n\r");
+
+		// Load old frequency from memory
+		df.tune_new = band_dial_value[new_band_index];
+	}
+	else
+	{
+		//printf("load default band freq\n\r");
+
+		// Load default band startup frequency
+		df.tune_new = new_band_freq;
+	}
+
+	//--UiDriverUpdateFrequency(1,0);
+
+	// Also reset second freq display
+	//--UiDriverUpdateSecondLcdFreq(df.tune_new/4);
+
+	// Change decode mode if need to
+	if(ts.dmod_mode != band_decod_mode[new_band_index])
+	{
+		// Update mode
+		ts.dmod_mode = band_decod_mode[new_band_index];
+
+		// Update Decode Mode (USB/LSB/AM/FM/CW)
+		//UiDriverShowMode();
+	}
+
+	// Change filter mode if need to
+	if(ts.filter_id != band_filter_mode[new_band_index])
+	{
+		ts.filter_id = band_filter_mode[new_band_index];
+		//UiDriverChangeFilter(0);	// update display and change filter
+		//UiDriverDisplayFilterBW();	// update on-screen filter bandwidth indicator
+		audio_driver_set_rx_audio_filter();
+		audio_driver_set_rx_audio_filter();	// we have to invoke the filter change several times for some unknown reason - 'dunno why!
+	}
+
+	// Create Band value
+//	UiDriverShowBand(new_band_index);
+
+	// Set TX power factor
+	UiDriverSetBandPowerFactor(new_band_index);
+
+	// Set filters
+	UiDriverChangeBandFilter(new_band_index,0);
+
+	// Finally update public flag
+	ts.band = new_band_index;
+
+	// Display frequency update
+	//
+	ts.refresh_freq_disp = 1;	// make frequency display refresh all digits
+	//
+//	if(ts.vfo_mem_mode & 0x80)	{	// in SPLIT mode?
+//		UiDriverUpdateFrequency(1,3);	// force display of second (TX) VFO frequency
+//		UiDriverUpdateFrequency(1,2);	// update RX frequency
+//	}
+//	else	// not in SPLIT mode - standard update
 		UiDriverUpdateFrequency(1,0);
 	//
 	ts.refresh_freq_disp = 0;
