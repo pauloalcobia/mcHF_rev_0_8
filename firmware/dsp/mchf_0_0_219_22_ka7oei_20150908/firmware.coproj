@@ -325,10 +325,10 @@
     <File name="drivers/cat/cat_driver.h" path="drivers/cat/cat_driver.h" type="1"/>
     <File name="drivers/audio/filters/iq_rx_filter_am_2k3.h" path="drivers/audio/filters/iq_rx_filter_am_2k3.h" type="1"/>
     <File name="memory.ld" path="memory.ld" type="1"/>
-    <File name="usb/usbd/core/inc/usbd_usr.h" path="usb/usbd/core/inc/usbd_usr.h" type="1"/>
     <File name="drivers/api" path="" type="2"/>
-    <File name="drivers/keyboard" path="" type="2"/>
     <File name="drivers/keyboard/usb/usbh_usr.c" path="drivers/keyboard/usb/usbh_usr.c" type="1"/>
+    <File name="drivers/keyboard" path="" type="2"/>
+    <File name="usb/usbd/core/inc/usbd_usr.h" path="usb/usbd/core/inc/usbd_usr.h" type="1"/>
     <File name="cmsis" path="" type="2"/>
     <File name="drivers/audio/filters/q_rx_filter_6kHz.h" path="drivers/audio/filters/q_rx_filter_6kHz.h" type="1"/>
     <File name="usb/otg/inc/usb_defines.h" path="usb/otg/inc/usb_defines.h" type="1"/>
@@ -343,9 +343,9 @@
     <File name="drivers/cat/usb/usbd_bsp.h" path="drivers/cat/usb/usbd_bsp.h" type="1"/>
     <File name="usb/otg/src/usb_hcd.c" path="usb/otg/src/usb_hcd.c" type="1"/>
     <File name="drivers/cat/usb/usbd_desc.c" path="drivers/cat/usb/usbd_desc.c" type="1"/>
-    <File name="usb/usbd/core/src/usbd_req.c" path="usb/usbd/core/src/usbd_req.c" type="1"/>
     <File name="usb/usbh/class/hid/src/usbh_hid_mouse.c" path="usb/usbh/class/HID/src/usbh_hid_mouse.c" type="1"/>
     <File name="usb/usbh/core/src/usbh_hcs.c" path="usb/usbh/core/src/usbh_hcs.c" type="1"/>
+    <File name="usb/usbd/core/src/usbd_req.c" path="usb/usbd/core/src/usbd_req.c" type="1"/>
     <File name="drivers/audio/filters/i_rx_filter_7kHz5.h" path="drivers/audio/filters/i_rx_filter_7kHz5.h" type="1"/>
     <File name="drivers/ui/misc/hamm_wnd.h" path="drivers/ui/misc/hamm_wnd.h" type="1"/>
     <File name="misc/v_eprom/eeprom.h" path="misc/v_eprom/eeprom.h" type="1"/>

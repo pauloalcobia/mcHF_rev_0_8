@@ -141,6 +141,7 @@ static void 	UiDriverReDrawSpectrumDisplay(void);
 
 #ifndef DSP_MODE
 static void 	UiDriverReDrawWaterfallDisplay(void);
+static void 	UiDriverLoadEepromValues(void);
 #endif
 
 static ulong 	UiDriverGetScopeTraceColour(void);
@@ -159,7 +160,6 @@ static void 	UiDriverSwitchOffPtt(void);
 //static void 	UiDriverSetBandPowerFactor(uchar band);
 //
 //static void		UiCalcTxIqGainAdj(void);
-static void 	UiDriverLoadEepromValues(void);
 void			UiDriverUpdateMenu(uchar mode);
 void 			UiDriverUpdateMenuLines(uchar index, uchar mode);
 void			UiDriverUpdateConfigMenuLines(uchar index, uchar mode);
@@ -423,6 +423,10 @@ void ui_driver_init(void)
 #ifndef DSP_MODE
 	// Load stored data from eeprom - again - as some of the values above would have been overwritten from the above
 	UiDriverLoadEepromValues();
+#endif
+
+#ifdef DSP_MODE
+	ts.audio_max_volume = 16;	//MAX_AUDIO_GAIN;
 #endif
 
 	//
@@ -5006,7 +5010,9 @@ static void UiDriverCheckEncoderOne(void)
 
 	//printf("pot diff: %d\n\r",pot_diff);
 
+#ifndef DSP_MODE
 	UiLCDBlankTiming();	// calculate/process LCD blanking timing
+#endif
 
 	// Take appropriate action
 	switch(ts.enc_one_mode)
@@ -5026,7 +5032,7 @@ static void UiDriverCheckEncoderOne(void)
 				if(ts.audio_gain > ts.audio_max_volume)
 					ts.audio_gain = ts.audio_max_volume;
 			}
-
+#ifndef DSP_MODE
 			// Value to string
 			sprintf(temp,"%02d",ts.audio_gain);
 
@@ -5037,10 +5043,11 @@ static void UiDriverCheckEncoderOne(void)
 			//
 			if(sd.use_spi)
 				ts.hold_off_spectrum_scope	= ts.sysclock + SPECTRUM_SCOPE_SPI_HOLDOFF_TIME_TUNE;	// schedule the time after which we again update the spectrum scope
-			//
+#endif
 			break;
 		}
 
+#ifndef DSP_MODE
 		// Sidetone gain or compression level
 		case ENC_ONE_MODE_ST_GAIN:
 		{
@@ -5097,6 +5104,7 @@ static void UiDriverCheckEncoderOne(void)
 
 			break;
 		}
+#endif
 
 		default:
 			break;
@@ -9305,6 +9313,7 @@ void UiDriverLoadFilterValue(void)	// Get filter value so we can init audio with
 	}
 }
 
+#ifndef DSP_MODE
 //
 //*----------------------------------------------------------------------------
 //* Function Name       : UiDriverLoadEepromValues
@@ -10732,6 +10741,7 @@ void UiDriverLoadEepromValues(void)
 	// Next setting...
 	//
 }
+#endif
 
 //
 // Below is a marker to make it easier to find the "Read" and "Save" EEPROM functions when scanning/scrolling the source code

@@ -124,6 +124,35 @@ static uchar api_dsp_SendByteSpiA(uint8_t byte)
 	return (uchar)SPI_I2S_ReceiveData(SPI2);
 }
 
+//*----------------------------------------------------------------------------
+//* Function Name       : api_dsp_transfer
+//* Object              : data exchange with the UI CPU
+//* Notes    			:
+//* Notes   			:
+//* Notes    			:
+//* Context    			: CONTEXT_UI_DRIVER
+//*----------------------------------------------------------------------------
+void api_dsp_transfer(void)
+{
+	ulong i;
+
+	// CS Low - generate IRQ in the UI CPU
+	GPIO_ResetBits(GPIOA, GPIO_Pin_9);
+
+	// Leading delay to allow for the task switching context
+	// in the UI CPU to catch up
+	for(i = 0; i < 20000; i++)
+		__asm(".hword 0x46C0");
+
+	// Send buffer - ideally via DMA
+	for(i = 0; i < 300; i++)
+		in_buffer[i] = api_dsp_SendByteSpiA(ou_buffer[i]);
+
+	// CS high - restore bus state
+	__asm(".word 0x46C046C0");
+	GPIO_SetBits(GPIOA, GPIO_Pin_9);
+}
+
 void api_dsp_init(void)
 {
 	//printf("api driver init...\n\r");
@@ -133,7 +162,7 @@ void api_dsp_init(void)
 
 //*----------------------------------------------------------------------------
 //* Function Name       : api_dsp_thread
-//* Object              : blink leds and update alive flag
+//* Object              : blink the red led(test only) and update alive flag
 //* Notes    			:
 //* Notes   			:
 //* Notes    			:
@@ -141,27 +170,26 @@ void api_dsp_init(void)
 //*----------------------------------------------------------------------------
 void api_dsp_thread(void)
 {
-	if(pro_s < 50000)
+	if(pro_s < 5000)
 	{
 		pro_s++;
 		return;
 	}
 	pro_s = 0;
 
+#if 0
 	if(api_drv_dissabled)
-	{
-		__asm(".word 0x46004600");
-		__asm(".word 0x46004600");
-		__asm(".word 0x46004600");
-		__asm(".word 0x46004600");
-	}
+		__asm(".hword 0x46C0");
 	else
 	{
-		//if(led_s)
-		//	mchf_board_red_led(1);
-		//else
-		//	mchf_board_red_led(0);
+		if(led_s)
+			mchf_board_red_led(1);
+		else
+			mchf_board_red_led(0);
+
+		__asm(".hword 0x46C0");
 	}
+#endif
 
 	led_s = !led_s;
 }
@@ -190,9 +218,9 @@ void api_dsp_post(q15_t *fft)
 
 	// ----------------------
 	// Header
-	ou_buffer[0x00] = 0x12; 				// sig
-	ou_buffer[0x01] = 0x34;					// sig
-	ou_buffer[0x02] = led_s;				// alive flag
+	ou_buffer[0x00] = 0x12; 				// signature
+	ou_buffer[0x01] = 0x34;					// signature
+	ou_buffer[0x02] = led_s;				// blinker
 	ou_buffer[0x03] = pub_v;				// seq cnt
 
 	// DSP Version
@@ -209,7 +237,9 @@ void api_dsp_post(q15_t *fft)
 
 	ou_buffer[0x0C] = ts.dmod_mode;
 	//ou_buffer[0x0D] = ts.band;
+	ou_buffer[0x0E] = ts.audio_gain;
 
+	// Insert FFT
 	if(fft != NULL)
 	{
 		// Left part of screen
@@ -226,31 +256,19 @@ void api_dsp_post(q15_t *fft)
 	ou_buffer[299] = 0xAA;
 
 	// -------------------------------------
-	// Transfer
-	//
-	// CS Low
-	GPIO_ResetBits(GPIOA, GPIO_Pin_9);
+	// Exchange API RAM
+	api_dsp_transfer();
+	// -------------------------------------
 
-	// Leading delay
-	for(k = 0; k < 10000; k++)
-		__asm(".word 0x46004600");
-
-	// Send buffer
-	for(k = 0; k < 300; k++)
-		in_buffer[k] = api_dsp_SendByteSpiA(ou_buffer[k]);
-
-	// CS high
-	__asm(".word 0x46004600");
-	GPIO_SetBits(GPIOA, GPIO_Pin_9);
-	// -- End transfer
-
-	// Set volume test
-	if(in_buffer[1] < MAX_AUDIO_GAIN)
+	// ---------------------------------------------------------------
+	// Set volume, but only if change requested by UI
+	if((in_buffer[1] < MAX_AUDIO_GAIN) && (ts.audio_gain != in_buffer[1]))
 	{
 		// value = DEFAULT_AUDIO_GAIN;
 		ts.audio_gain = in_buffer[1];
 	}
 
+	// ---------------------------------------------------------------
 	// Set demodulator mode
 	if(in_buffer[2] <= DEMOD_MAX_MODE)
 		ts.dmod_mode = in_buffer[2];
